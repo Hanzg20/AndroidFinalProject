@@ -18,7 +18,7 @@ ACdictionary boasts a variety of features aimed at providing a comprehensive lea
 •	User-Friendly Design: An intuitive interface that ensures a seamless user experience across devices.
 
 Screenshots
-Images depicting the app's main functionality, including the search feature, favorites list, quiz selection, and gameplay, would be displayed here.
+Images depicting the app's main functionality, including the search feature, favorites list, and quiz selection,  would be displayed here.
 
 Teammember
 The development and success of ACdictionary is attributed to the dedicated efforts of:
