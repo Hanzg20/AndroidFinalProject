@@ -54,5 +54,28 @@ dependencies {
 
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("com.google.code.gson:gson:2.8.8")
+
+
+
+    androidTestImplementation("org.hamcrest:hamcrest-library:2.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
+
+
+    testImplementation("androidx.room:room-testing:$room_version")
+    implementation("androidx.room:room-paging:$room_version")
+    implementation("com.android.volley:volley:1.2.0")
+    implementation("com.google.code.gson:gson:2.8.8")
+
+
+    androidTestImplementation("org.hamcrest:hamcrest-library:2.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
+
+
+
+
+
 
 }

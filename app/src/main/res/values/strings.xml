@@ -202,5 +202,9 @@
 
     <string name="save">save</string>
     <string name="remove">remove</string>
-
+    <string name="Favorite" >Favorite</string>
+    <string name="Lookup">Lookup </string>
+    <string name="longitude">Longitude</string>
+    <string name="Savelocation">SaveLocation</string>
+    <string name="Latitude">Latitude</string>
 </resources>

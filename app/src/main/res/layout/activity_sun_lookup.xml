@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sunLookup.SunLookupActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/myToolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#0F9D58"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:title="Sunrise and Sunset Lookup"
+
+      app:titleTextColor="#ffff" />
+
+  <!-- Date -->
+  <TextView
+      android:id="@+id/dateTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+  <EditText
+      android:id="@+id/latitudeEditText"
+      android:layout_width="379dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:hint="Latitude"
+      android:inputType="numberDecimal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.585"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:layout_editor_absoluteY="268dp" />
+
+  <EditText
+      android:id="@+id/longitudeEditText"
+      android:layout_width="379dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="16dp"
+      android:hint="@string/longitude"
+      android:inputType="numberDecimal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.585"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/latitudeEditText" />
+
+  <Button
+      android:id="@+id/lookupButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:onClick="performSunriseSunsetLookup"
+      android:text="@string/Lookup"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.531"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/longitudeEditText" />
+
+  <Button
+      android:id="@+id/saveButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="24dp"
+      android:onClick="saveLocationToDatabase"
+      android:text="@string/Savelocation"
+      app:layout_constraintEnd_toStartOf="@+id/DeleteButton"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/FavoriteButton"
+      app:layout_constraintTop_toBottomOf="@+id/lookupButton" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycleView"
+      android:layout_width="611dp"
+      android:layout_height="438dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/saveButton"
+      app:layout_constraintVertical_bias="0.0" />
+
+  <Button
+      android:id="@+id/FavoriteButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:onClick="viewFavoriteLocations"
+      android:text="@string/Favorite"
+      app:layout_constraintBottom_toBottomOf="@+id/saveButton"
+      app:layout_constraintEnd_toStartOf="@+id/saveButton"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/saveButton" />
+
+  <Button
+      android:id="@+id/DeleteButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:onClick="deleteFavoriteLocation"
+      android:text="Delete"
+      app:layout_constraintBottom_toBottomOf="@+id/saveButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/saveButton"
+      app:layout_constraintTop_toTopOf="@+id/saveButton" />
+
+  <TextView
+      android:id="@+id/Favorite_Location_view"
+      android:layout_width="156dp"
+      android:layout_height="35dp"
+      android:text="TextView"
+      app:layout_constraintBottom_toTopOf="@+id/latitudeEditText"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.572"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/sunsetView"
+      app:layout_constraintVertical_bias="0.877"
+      tools:text="FavoriteLocationView" />
+
+  <TextView
+      android:id="@+id/sunriseView"
+      android:layout_width="150dp"
+      android:layout_height="32dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="52dp"
+      android:text="Sunrise: "
+      app:layout_constraintEnd_toStartOf="@+id/sunsetView"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/myToolbar" />
+
+  <TextView
+      android:id="@+id/sunsetView"
+      android:layout_width="147dp"
+      android:layout_height="35dp"
+      android:layout_marginTop="52dp"
+      android:layout_marginEnd="8dp"
+      android:text="Sunset: "
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/sunriseView"
+      app:layout_constraintTop_toBottomOf="@+id/myToolbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
