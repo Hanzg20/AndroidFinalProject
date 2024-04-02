@@ -14,6 +14,9 @@ public interface FavoriteLocationDao {
     @Insert
     void insert(FavoriteLocation favoriteLocation);
 
+    /**
+     * @param favoriteLocation
+     */
     @Update
     void update(FavoriteLocation favoriteLocation);
 
@@ -25,4 +28,11 @@ public interface FavoriteLocationDao {
 
     @Query("SELECT * FROM favorite_locations WHERE id = :id")
     FavoriteLocation getFavoritelocationById(int id);
+
+
+    @Query("SELECT * FROM favorite_locations WHERE latitude = :lat AND longitude = :lon")
+    FavoriteLocation getFavoriteLocationByLatLng(double lat, double lon);
+
+    FavoriteLocation getFavoritelocationByLatLng(double latitude,
+                                                 double longitude);
 }

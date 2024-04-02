@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Refresh menu item -->
+    <item
+        android:id="@+id/menu_refresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_refresh"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Favorite menu item -->
+    <item
+        android:id="@+id/menu_favorite"
+        android:title="Favorite"
+        android:icon="@drawable/star_line"
+        app:showAsAction="always"/>
+
+    <!-- Delete menu item -->
+    <item
+        android:id="@+id/menu_delete"
+        android:title="Delete"
+        android:icon="@drawable/delete_"
+        app:showAsAction="always"/>
+
+    <!-- Other menu item -->
+    <item
+        android:id="@+id/menu_other"
+        android:title="Other"
+        android:icon="@drawable/refresh_"
+        app:showAsAction="always"/>
+
+</menu>

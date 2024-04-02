@@ -18,4 +18,5 @@
     <color name="yellow">#D5D50D</color>
     <color name="pink">#EFBEEF</color>
     <color name="grey">#ECE3E3</color>
+    <color name="_000000">#000000</color>
 </resources>
