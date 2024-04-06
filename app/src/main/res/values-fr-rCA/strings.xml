@@ -1,6 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">AndroidFinalProject</string>
-    <string name="landingTitle">CENTRE TOUT-EN-UN</string>
+    <string name="sun_toolbar_title">sun_del_title</string>
+    <string name="sun_fav">Coucher du Soleil \\n Mes Soleils Enregistrés</string>
+    <string name="save">Enregistrer</string>
+    <string name="remove">Supprimer</string>
+
+    <string name="Favorite">Favori</string>
+    <string name="Lookup">Rechercher</string>
+    <string name="longitude">Longitude</string>
+    <string name="Savelocation">Enregistrer l\'emplacement</string>
+      <string name="Latitude">Latitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="sunrisesunsetprefs">PréférencesLeverCoucherSoleil</string>
+    <string name="sunset">Coucher de soleil</string>
+
 
     <!--   Dict Strings -->
     <string name="dict_titleText">Dictionaire</string>

@@ -1,7 +1,5 @@
 package algonquin.cst2335.androidfinalproject.sunLookup.Dao;
 
-
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.ColumnInfo;

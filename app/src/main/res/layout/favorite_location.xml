@@ -1,66 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- recycler_view_item_layout.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="horizontal">
 
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/myToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#0F9D58"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"/>
-
-    <!-- Location Name -->
     <TextView
-        android:id="@+id/textLocationName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
-
-    <!-- Latitude -->
-    <TextView
-        android:id="@+id/textLatitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#333333"
-        android:layout_marginBottom="4dp"
-        android:hint="Latitude"/>
-
-    <!-- Longitude -->
-    <TextView
-        android:id="@+id/textLongitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#333333"
-        android:layout_marginBottom="4dp"
-        android:hint="Longitude"/>
-
-    <!-- Button to delete location -->
-    <Button
-        android:id="@+id/btnDelete"
+        android:id="@+id/latitudeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete"
-        android:textColor="#FFFFFF"
-        android:background="#FF0000"
-        android:layout_gravity="end"/>
+        android:text="Latitude: "
+        android:layout_marginEnd="8dp"/>
 
-    <!-- Button to view location -->
-    <Button
-        android:id="@+id/btnView"
+    <TextView
+        android:id="@+id/longitudeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ViewFavoriteLocation"
-        android:textColor="#FFFFFF"
-        android:background="#007bff"
+        android:text="Longitude: "
+        android:layout_marginEnd="8dp"/>
 
-        android:layout_gravity="end"/>
-
+    <Button
+        android:id="@+id/viewFavoriteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Favorite Locations" />
 </LinearLayout>
