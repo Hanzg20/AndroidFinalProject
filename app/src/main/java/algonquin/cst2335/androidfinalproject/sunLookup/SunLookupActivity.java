@@ -1,15 +1,14 @@
 package algonquin.cst2335.androidfinalproject.sunLookup;
 
-import static algonquin.cst2335.androidfinalproject.song.RequestQueueSingleton.context;
 
-import android.app.AlertDialog;
+
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
+
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -37,6 +36,7 @@ import algonquin.cst2335.androidfinalproject.databinding.ActivitySunLookupBindin
 import algonquin.cst2335.androidfinalproject.sunLookup.Dao.AppDatabase;
 import algonquin.cst2335.androidfinalproject.sunLookup.Dao.FavoriteLocation;
 import algonquin.cst2335.androidfinalproject.sunLookup.Dao.FavoriteLocationDao;
+import algonquin.cst2335.androidfinalproject.sunLookup.LocationViewModel;
 
 public class SunLookupActivity extends AppCompatActivity {
 
@@ -187,7 +187,7 @@ public class SunLookupActivity extends AppCompatActivity {
                     FavoriteLocation favoriteLocationToDelete = favoriteLocationDao.getFavoriteLocationByLatLng(lat, lon);
 
                     if (favoriteLocationToDelete != null) {
-                        favoriteLocationDao.delete(favoriteLocationToDelete);
+                        favoriteLocationDao.deleteFavoriteLocation(favoriteLocationToDelete);
                         Toast.makeText(this, "Location deleted from favorites", Toast.LENGTH_SHORT).show();
 
                         favoriteLocations.remove(favoriteLocationToDelete);
@@ -206,7 +206,7 @@ public class SunLookupActivity extends AppCompatActivity {
                     return;
                 }
 
-               try {
+                try {
                     double lat = Double.parseDouble(latitude);
                     double lon = Double.parseDouble(longitude);
 
@@ -224,5 +224,7 @@ public class SunLookupActivity extends AppCompatActivity {
 
             });
         });
+
+
     }
 }

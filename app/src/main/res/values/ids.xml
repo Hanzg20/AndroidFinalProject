@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="deleteButton" type="id" />
+    <item name="FavoriteButton" type="id" />
+    <item name="saveButton" type="id" />
+</resources>

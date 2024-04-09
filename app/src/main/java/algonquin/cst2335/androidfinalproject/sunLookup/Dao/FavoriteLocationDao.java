@@ -12,7 +12,7 @@ import java.util.List;
 @Dao
 public interface FavoriteLocationDao {
     @Insert
-    void insert(FavoriteLocation Location);
+    long insert(FavoriteLocation Location);
 
     /**
      * @param favoriteLocation
@@ -21,16 +21,16 @@ public interface FavoriteLocationDao {
     void update(FavoriteLocation favoriteLocation);
 
     @Delete
-    void delete(FavoriteLocation favoriteLocation);
+    void deleteFavoriteLocation(FavoriteLocation favoriteLocation);
 
     @Query("SELECT * FROM favorite_locations")
     List<FavoriteLocation> getAllFavoriteLocations();
 
-    @Query("SELECT * FROM favorite_locations WHERE id = :id")
+   @Query("SELECT * FROM favorite_locations WHERE id = :id")
     FavoriteLocation getFavoritelocationById(int id);
 
 
-    @Query("SELECT * FROM favorite_locations WHERE latitude = :latitude AND longitude = :longitude")
+   @Query("SELECT * FROM favorite_locations WHERE latitude = :latitude AND longitude = :longitude")
     FavoriteLocation getFavoriteLocationByLatLng(double latitude, double longitude);
 
 
